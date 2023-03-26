@@ -1,9 +1,9 @@
 from itertools import product
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product, Category, ProductImage
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import ProductSerializer, CategorySerializer
+from .serializers import ProductSerializer, CategorySerializer, ProductImageSerializer
 from rest_framework import status
 from rest_framework import generics
 
@@ -12,8 +12,9 @@ from rest_framework import generics
 class ProductList(APIView):
     """ List all products """
 
-    def get(self, request, format=None):
-        product = Product.objects.all()
+    def get(self,request, format=None):
+        category = get_object_or_404(Category, id=category_id)
+        product = Product.objects.filter(category=category)
         serializer = ProductSerializer(product, many=True)
         return Response(serializer.data) 
     
@@ -35,6 +36,10 @@ class CategoryList(APIView):
         category = Category.objects.all()
         serializer = CategorySerializer(category, many=True)
         return Response(serializer.data)
+    
+class CreateProductImage(APIView):
+    """ posting of product images associated with a specific product"""
+   
 
 
 
