@@ -7,12 +7,14 @@ from .serializers import ProductSerializer, CategorySerializer, ProductImageSeri
 from rest_framework import status
 from rest_framework import generics
 
+from products import serializers
+
 # Create your views here.
 
 class ProductList(APIView):
     """ List all products """
 
-    def get(self,request, format=None):
+    def get(self,request, category_id, format=None):
         category = get_object_or_404(Category, id=category_id)
         product = Product.objects.filter(category=category)
         serializer = ProductSerializer(product, many=True)
@@ -37,9 +39,10 @@ class CategoryList(APIView):
         serializer = CategorySerializer(category, many=True)
         return Response(serializer.data)
     
-class CreateProductImage(APIView):
+class CreateProductImage(generics.CreateAPIView):
     """ posting of product images associated with a specific product"""
-   
+    queryset = ProductImage.objects.all()
+    serializer_class = ProductImageSerializer
 
 
 

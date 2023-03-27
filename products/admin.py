@@ -6,9 +6,12 @@ from . models import Category,Product,ProductImage
 
 class AdminProduct(admin.ModelAdmin):
     list_display = ("name", "category", "price", "stock")
+    empty_value_display = '-empty field-'
 
 class AdminProductImage(admin.ModelAdmin):
     list_display= ("product", "image")
+    list_filter = ('product',)
+    empty_value_display = '-empty field-'
 
 admin.site.register(Product, AdminProduct)
 admin.site.register(Category)
