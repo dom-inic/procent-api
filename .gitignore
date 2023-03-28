@@ -50,3 +50,5 @@ cython_debug/
 
 .vscode
 .idea
+media/
+product_images/
