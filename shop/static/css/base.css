@@ -1,0 +1,28 @@
+body{
+    background: rgb(68, 6, 95);
+    background-image: url('static/img/background.jpeg');
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif;
+}
+
+#header {
+    padding:10px 100px;
+    font-size:14px;
+    background:#7a12c0;
+    color:#fff;
+    border-bottom:4px solid #641cdf;
+    overflow:auto;
+}
+
+#header .logo {
+    font-family: 'Muli', sans-serif;
+    float:left;
+    color:#e3ccf7;
+    font-size:20px;
+    margin-right:10%;
+}
+
+#content {
+    padding:30px 100px;
+}
