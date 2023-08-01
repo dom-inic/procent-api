@@ -20,10 +20,10 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    # path('', include('shop.urls', namespace='shop')),
+    path('cart/', include('cart.urls', namespace='cart')),
+    # path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('', include('shop.urls', namespace='shop')),
-    path('cart/', include('cart.url', namespace='cart')),
-    path('api-auth/', include('rest_framework.urls')),
 ]
 
 if settings.DEBUG:
