@@ -15,7 +15,7 @@
             <th>Price</th>
         </tr>
     </thead>
-    {% comment %} <tbody>
+    <tbody>
         {% for item in cart  %}
         {% with product=item.product %}
         <tr>
@@ -46,7 +46,7 @@
     <p class="text-right">
         <a href="{% url 'shop:product_list' %}" class="button-light">Continue shopping </a>
         <a href="#" class="button">Checkout </a>
-    </p> {% endcomment %}
+    </p>
 
 </table>
 {% endblock content %}
