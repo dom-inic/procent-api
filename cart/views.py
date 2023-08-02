@@ -20,6 +20,8 @@ def cart_add(request, product_id):
         )
     return redirect('cart:cart_detail')
 
+
+#  Todo: Add ajax to this function to fix 302 error
 @require_POST
 def cart_remove(request, product_id):
     cart = Cart(request)

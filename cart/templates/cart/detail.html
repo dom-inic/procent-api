@@ -83,10 +83,9 @@
             <td class="num">ksh{{ cart.get_total_price }}</td>
         </tr>
     </tbody>
-    <p class="text-right">
-        <a href="{% url 'shop:product_list' %}" class="button-light">Continue shopping </a>
-        <a href="#" class="button">Checkout </a>
-    </p>
-
 </table>
+<p class="text-right">
+    <a href="{% url 'shop:product_list' %}" class="button-light">Continue shopping </a>
+    <a href="#" class="button">Checkout </a>
+</p>
 {% endblock content %}
