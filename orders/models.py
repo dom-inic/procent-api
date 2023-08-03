@@ -12,6 +12,8 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
+    braintree_id = models.CharField(max_length=150, blank=True)
+    # mpesa_id = models.CharField(blank=True, max_length=200)
 
     class Meta:
         ordering = ('-created',)
