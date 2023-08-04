@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(i=u9mys*bafg*p!_-lzck8_rs^!zr4@+h0b$4rr9589t8e7i^'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -143,9 +145,9 @@ CART_SESSION_ID = 'cart'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # braintree settings 
-BRAINTREE_MERCHANT_ID = '#'
-BRAINTREE_PUBLIC_KEY = '#'
-BRAINTREE_PRIVATE_KEY = '#'
+BRAINTREE_MERCHANT_ID = os.environ['BRAINTREE_MERCHANT_ID']
+BRAINTREE_PUBLIC_KEY = os.environ['BRAINTREE_PUBLIC_KEY']
+BRAINTREE_PRIVATE_KEY = os.environ['BRAINTREE_PRIVATE_KEY']
 
 import braintree
 BRAINTREE_CONF = braintree.Configuration(
