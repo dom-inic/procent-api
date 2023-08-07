@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
-    'coupon.app.CouponConfig',
+    'coupon.apps.CouponConfig',
 ]
 
 MIDDLEWARE = [
