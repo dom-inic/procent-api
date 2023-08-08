@@ -14,7 +14,7 @@ def coupon_apply(request):
             coupon = Coupon.objects.get(
                 code__iexact=code, 
                 valid_from__lte=now, 
-                valid__gte=now, active=True)
+                valid_to__gte=now, active=True)
             request.session['coupon_id'] = coupon.id
         except Coupon.DoesNotExist:
             request.session['coupon_id'] = None

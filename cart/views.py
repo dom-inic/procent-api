@@ -5,6 +5,7 @@ from django.urls import reverse
 from shop.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
+from coupon.forms import CouponApplyForm
 
 @require_POST
 def cart_add(request, product_id):
@@ -40,4 +41,5 @@ def cart_detail(request):
                 'override': True
             }
         )
-    return render(request, 'cart/detail.html', {'cart': cart})
+    coupon_apply_form = CouponApplyForm()
+    return render(request, 'cart/detail.html', {'cart': cart, 'coupon_apply_form': coupon_apply_form})
