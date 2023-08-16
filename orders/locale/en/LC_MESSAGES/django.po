@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-10 18:17+0300\n"
+"POT-Creation-Date: 2023-08-15 21:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: orders/models.py:10
 msgid "first name"
-msgstr ""
+msgstr "jina la kwanza"
 
 #: orders/models.py:11
 msgid "last name"
-msgstr ""
+msgstr "jina la mwisho"
 
 #: orders/models.py:12
 msgid "e-mail"
-msgstr ""
+msgstr "barua pepe"
 
 #: orders/models.py:13
 msgid "address"
-msgstr ""
+msgstr "sanduku"
 
 #: orders/models.py:14
 msgid "postal code"
-msgstr ""
+msgstr "Nambari ya posta"
 
 #: orders/models.py:15
 msgid "city"
+msgstr "MJI"
+
+#: orders/templates/orders/order/create.html:5
+#: orders/templates/orders/order/create.html:8
+msgid "Checkout"
 msgstr ""
+
+#: orders/templates/orders/order/create.html:10
+msgid "Your Order"
+msgstr "order yako"
+
+#: orders/templates/orders/order/create.html:20
+#, python-format
+msgid ""
+"\n"
+"                \" %(code)s\" (%(discount)s%% off)\n"
+"                "
+msgstr "kodi, diskounti"
+
+#: orders/templates/orders/order/create.html:29
+msgid "Total"
+msgstr "jumla"
+
+#: orders/templates/orders/order/create.html:33
+msgid "Place order"
+msgstr "Weka order"
