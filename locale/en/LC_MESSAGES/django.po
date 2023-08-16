@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-15 21:00+0300\n"
-"PO-Revision-Date: 2023-08-16 20:06+0000\n"
+"POT-Creation-Date: 2023-08-16 23:34+0300\n"
+"PO-Revision-Date: 2023-08-16 20:36+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -27,13 +27,46 @@ msgstr "Quantity"
 msgid "Coupon"
 msgstr "Coupon"
 
-#: procentapi/settings.py:124
+#: payment/urls.py:8
+msgid "process/"
+msgstr "process/"
+
+#: payment/urls.py:9
+msgid "done/"
+msgstr "done/"
+
+#: payment/urls.py:10
+msgid "canceled/"
+msgstr "canceled/"
+
+#: procentapi/settings.py:125
 msgid "English"
 msgstr "English"
 
-#: procentapi/settings.py:125
+#: procentapi/settings.py:126
 msgid "Swahili"
 msgstr "Swahili"
+
+#: procentapi/urls.py:25
+msgid "admin/"
+msgstr "admin/"
+
+#: procentapi/urls.py:26
+msgid "cart/"
+msgstr "cart/"
+
+#: procentapi/urls.py:27
+msgid "orders/"
+msgstr "orders/"
+
+#: procentapi/urls.py:28
+msgid "payment/"
+msgstr "payment/"
+
+#: procentapi/urls.py:29
+#| msgid "Coupon"
+msgid "coupons/"
+msgstr "coupons/"
 
 #: shop/templates/shop/base.html:7
 msgid "Procent Store | your best choice for a tech store"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-15 21:00+0300\n"
+"POT-Creation-Date: 2023-08-16 23:34+0300\n"
 "PO-Revision-Date: 2023-08-16 20:10+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,13 +27,47 @@ msgstr "kiwango"
 msgid "Coupon"
 msgstr "kuponi"
 
-#: procentapi/settings.py:124
+#: payment/urls.py:8
+msgid "process/"
+msgstr ""
+
+#: payment/urls.py:9
+msgid "done/"
+msgstr ""
+
+#: payment/urls.py:10
+msgid "canceled/"
+msgstr ""
+
+#: procentapi/settings.py:125
 msgid "English"
 msgstr "kiingereza"
 
-#: procentapi/settings.py:125
+#: procentapi/settings.py:126
 msgid "Swahili"
 msgstr "kiswahili"
+
+#: procentapi/urls.py:25
+msgid "admin/"
+msgstr ""
+
+#: procentapi/urls.py:26
+msgid "cart/"
+msgstr ""
+
+#: procentapi/urls.py:27
+msgid "orders/"
+msgstr ""
+
+#: procentapi/urls.py:28
+msgid "payment/"
+msgstr ""
+
+#: procentapi/urls.py:29
+#, fuzzy
+#| msgid "Coupon"
+msgid "coupons/"
+msgstr "kuponi"
 
 #: shop/templates/shop/base.html:7
 msgid "Procent Store | your best choice for a tech store"
