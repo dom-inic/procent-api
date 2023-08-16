@@ -24,7 +24,8 @@ urlpatterns = [
     path('cart/', include('cart.urls', namespace='cart')),
     path('orders/', include('orders.urls', namespace='orders')),
     path('payment/', include('payment.urls', namespace='payment')),
-    path('coupons', include('coupon.urls', namespace='coupons')),
+    path('coupons/', include('coupon.urls', namespace='coupons')),
+    path('rosetta/', include('rosetta.urls')),
     path('', include('shop.urls', namespace='shop')),
     # path('api-auth/', include('rest_framework.urls')),
 ]

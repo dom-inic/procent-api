@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # third part apps
     'rest_framework',
+    'rosetta',
 
     # apps
     'shop.apps.ShopConfig',
