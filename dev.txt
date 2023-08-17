@@ -1,0 +1,19 @@
+// runserver 
+python3 manage.py makemigrations 
+python3 manage.py migrate
+python3 manage.py runserver 
+
+// translations
+django-admin makemessages --all 
+django-admin compilemessages --all 
+or use rosetta interface to compile messages 
+
+// asynchronous tasks 
+start rabbitmq/redis or any other message broker 
+brew services restart/start rabbitmq
+ // celery
+    start celery with the name of the app 
+    celery -A procentapi worker -l info
+     
+    use flower for to watch for asynchronous tasks on flower interface 
+    celery -A procentapi flower
