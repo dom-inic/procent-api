@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rosetta',
     'parler',
+    'localflavor',
 
     # apps
     'shop.apps.ShopConfig',
