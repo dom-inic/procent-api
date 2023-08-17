@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # third part apps
     'rest_framework',
     'rosetta',
+    'parler',
 
     # apps
     'shop.apps.ShopConfig',
@@ -128,6 +129,17 @@ LANGUAGES = (
 LOCALE_PATHS =(
     os.path.join(BASE_DIR, 'locale/'),
 )
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'sw'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
 
 TIME_ZONE = 'UTC'
 
