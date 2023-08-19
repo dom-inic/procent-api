@@ -3,10 +3,12 @@ from django.conf import settings
 from orders.models import Order
 import braintree
 from . tasks import payment_completed
+from django.contrib.auth.decorators import login_required
 # instantiate braintree payment gateway
 
 gateway = braintree.BraintreeGateway(settings.BRAINTREE_CONF)
 
+@login_required
 def payment_process(request):
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id =order_id)
@@ -40,10 +42,11 @@ def payment_process(request):
         # generate token
         client_token = gateway.client_token.generate()
         return render(request, 'payment/process.html', {'order': order, 'client_token': client_token})
-    
+@login_required 
 def payment_done(request):
     return render(request, 'payment/done.html')
 
+@login_required
 def paymemnt_canceled(request):
     return render(request, 'payment/canceled.html')
 

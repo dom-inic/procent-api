@@ -4,6 +4,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.conf import settings
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+from django.contrib.auth.decorators import login_required
 import weasyprint
 from . models import OrderItem, Order
 from . forms import OrderCreateForm
@@ -28,7 +29,7 @@ def admin_order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
     return render(request, 'admin/orders/detail.html', {'order': order})
 
-
+@login_required
 def order_create(request):
     cart = Cart(request)
     if request.method == 'POST':
