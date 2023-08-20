@@ -10,7 +10,10 @@ class CategoryAdmin(TranslatableAdmin):
     list_display = ['name', 'slug']
     # prepopulated_fields = {'slug': ('name',)}
 
-    def get_prepopulated_fields(self, request: HttpRequest, obj:None = None) -> Dict[str, Tuple[str]]:
+    def get_prepopulated_fields(
+            self, 
+            request: HttpRequest, 
+            obj:None = None) -> Dict[str, Tuple[str]]:
         return {'slug': ('name',)}
 
 @admin.register(Product)
@@ -20,5 +23,8 @@ class ProductAdmin(TranslatableAdmin):
     list_editable = ['price', 'available']
     # prepopulated_fields = {'slug':('name',)}
 
-    def get_prepopulated_fields(self, request: HttpRequest, obj:None = None) -> Dict[str, Tuple[str]]:
+    def get_prepopulated_fields(
+            self, 
+            request: HttpRequest, 
+            obj:None = None) -> Dict[str, Tuple[str]]:
         return {'slug': ('name',)}
