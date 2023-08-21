@@ -8,13 +8,17 @@ def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
-    paginator = Paginator(products,8)
     if category_slug:
         language = request.LANGUAGE_CODE
         category = get_object_or_404(Category,
                                     translations__language_code = language,
                                     translations__slug=category_slug)
         products = products.filter(category=category)
+    
+    # Apply pagination
+    paginator = Paginator(products, 6)  # Show 6 products per page
+    page_number = request.GET.get('page')
+    products = paginator.get_page(page_number)
     return render(request, 'shop/product/list.html', {'category': category,
                                                     'categories': categories, 
                                                     'products':products})
