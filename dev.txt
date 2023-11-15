@@ -17,3 +17,13 @@ brew services restart/start rabbitmq
      
     use flower for to watch for asynchronous tasks on flower interface 
     celery -A procentapi flower
+
+docker: 
+docker-compose up
+docker-compose down 
+docker-compose up -d --build     -- rebuild image
+executing django commands on web 
+      docker-compose exec web python manage.py migrate
+      docker-compose exec web python manage.py createsuperuser
+      docker-compose exec web python manage.py createsuperuser
+      docker-compose exec web pipenv install psycopg2-binary==2.8.3
