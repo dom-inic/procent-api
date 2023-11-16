@@ -11,10 +11,12 @@ services:
     ports:
       - 8000:8000
     depends_on:
+      - db
       - redis
       - rabbitmq
       - celery
-      - db
+  db:
+    image: postgres:16
   
   redis:
     image: redis:7
@@ -39,6 +41,3 @@ services:
       - ./.env
     depends_on:
       - redis
-
-    db:
-      image:postgres:16
