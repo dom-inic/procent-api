@@ -55,7 +55,7 @@
                                 console.log("item removed successfully")
                                 return response.json()
                             } else {
-                                console.log("handling error for failed remoal")
+                                console.log("handling error for failed removal")
                                 throw new Error('Network response was not ok')
                             }
                         })
@@ -120,3 +120,6 @@
     <a href="{% url 'orders:order_create' %}" class="button">Checkout </a>
 </p>
 {% endblock content %}
+{% block scripts %}
+    
+{% endblock scripts %}

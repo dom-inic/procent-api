@@ -31,7 +31,7 @@ class Cart(object):
 
     def save(self):
         # mark the session as modified to make sure its saved 
-        self.session.modefied = True
+        self.session.modified = True
 
     def remove(self, product):
         """Remove a product from the cart"""
