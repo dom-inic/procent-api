@@ -35,3 +35,8 @@ def product_detail(request,id,slug):
                                                         'recommended_products': recommended_products
                                                         })
 
+def shop(request):
+    categories = Category.objects.all()
+    products = Product.objects.order_by('-created')[:8]
+    return render(request, 'shop/home.html', {'categories': categories, 'products': products})
+

@@ -195,6 +195,30 @@ ul.errorlist {
     overflow:hidden;
 }
 
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Set your desired aspect ratio here (e.g., 1:1 for square, 16:9 for widescreen) */
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Additional styles for product-action buttons (adjust as needed) */
+.product-action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px; /* Adjust padding as needed */
+    /* Other styles */
+}
+
 .product-list .item {
     width:25%;
     padding:10px 20px 10px 0;

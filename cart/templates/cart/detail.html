@@ -5,7 +5,7 @@
 {% block content %}
 <h1> Your shopping cart</h1>
 <table class="cart">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>Image</th>
             <th>Product</th>
@@ -72,8 +72,8 @@
                     }
                 </script>
             </td>
-            <td class="num">ksh{{item.price}}</td>
-            <td class="num">ksh{{ item.total_price }}</td>
+            <td class="num">${{item.price}}</td>
+            <td class="num">${{ item.total_price }}</td>
         </tr>
         {% endwith %}
         {% endfor %}
@@ -81,18 +81,18 @@
             <tr class="subtotal">
                 <td>Subtotal</td>
                 <td colspan="4"></td>
-                <td class="num">ksh{{ cart.get_total_price|floatformat:2 }}</td>
+                <td class="num">${{ cart.get_total_price|floatformat:2 }}</td>
             </tr> 
             <tr>
                 <td>"{{ cart.coupon.code }}" coupon({{ cart.coupon.discount }}% off)</td>
                 <td colspan="4"></td>
-                <td class="num neg"> - ksh{{ cart.get_discount|floatformat:2 }}</td>
+                <td class="num neg"> - ${{ cart.get_discount|floatformat:2 }}</td>
             </tr>
         {% endif %}
         <tr class="total">
             <td>Total</td>
             <td colspan="4"></td>
-            <td class="num">ksh{{ cart.get_total_price_after_discount|floatformat:2 }}</td>
+            <td class="num">${{ cart.get_total_price_after_discount|floatformat:2 }}</td>
         </tr>
     </tbody>
 </table>
