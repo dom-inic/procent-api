@@ -202,10 +202,10 @@ BRAINTREE_CONF = braintree.Configuration(
     BRAINTREE_PRIVATE_KEY
 )
 
-REDIS_HOST = 'localhost'
-REDIS_PORT = '6379'
+REDIS_HOST = 'ec2-52-70-18-167.compute-1.amazonaws.com'
+REDIS_PORT = '23940'
 REDIS_DB = 1
 
 # # Celery Configuration docker
-# CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq:5672//'
-# CELERY_RESULT_BACKEND = 'rpc://'
+CELERY_BROKER_URL = 'amqps://mnblvtxv:Sn6DfuO620YOAZ3eikewGOn4mycnV1yz@fish.rmq.cloudamqp.com/mnblvtxv'
+CELERY_RESULT_BACKEND = 'redis://:p2103027a4862e349d4df7bdc14f9371c8b464882a6803ee9bc253e779ea2db61@ec2-52-70-18-167.compute-1.amazonaws.com:23939'
