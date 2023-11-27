@@ -26,11 +26,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
-
 
 # Application definition
 
@@ -67,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'procentapi.urls'
@@ -94,12 +90,6 @@ WSGI_APPLICATION = 'procentapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 # DATABASES = {
 #     'default': {
@@ -202,10 +192,3 @@ BRAINTREE_CONF = braintree.Configuration(
     BRAINTREE_PRIVATE_KEY
 )
 
-# REDIS_HOST = 'ec2-52-70-18-167.compute-1.amazonaws.com'
-# REDIS_PORT = '23940'
-# REDIS_DB = 1
-
-# # # Celery Configuration docker
-# CELERY_BROKER_URL = 'amqps://mnblvtxv:Sn6DfuO620YOAZ3eikewGOn4mycnV1yz@fish.rmq.cloudamqp.com/mnblvtxv'
-# CELERY_RESULT_BACKEND = 'redis://ec2-52-70-18-167.compute-1.amazonaws.com:23940/1'
