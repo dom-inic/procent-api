@@ -20,6 +20,6 @@ REDIS_HOST = 'ec2-44-196-160-1.compute-1.amazonaws.com'
 REDIS_PORT = '16340'
 REDIS_DB = 1
 
-# # Celery Configuration docker
-# CELERY_BROKER_URL = 'amqps://mnblvtxv:Sn6DfuO620YOAZ3eikewGOn4mycnV1yz@fish.rmq.cloudamqp.com/mnblvtxv'
-# CELERY_RESULT_BACKEND = 'redis://ec2-52-70-18-167.compute-1.amazonaws.com:23940/1'
+# Celery Configuration docker
+CELERY_BROKER_URL = 'rediss://:p6da119e6d04a68daf6bfa00b216a2a45605feceee98f003355d56c3c9d177b0d@ec2-44-196-160-1.compute-1.amazonaws.com:16340/0'
+CELERY_RESULT_BACKEND = 'rediss://:p6da119e6d04a68daf6bfa00b216a2a45605feceee98f003355d56c3c9d177b0d@ec2-44-196-160-1.compute-1.amazonaws.com:16340/0'
