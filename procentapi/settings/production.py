@@ -21,12 +21,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-REDIS_HOST = 'ec2-52-70-18-167.compute-1.amazonaws.com'
-REDIS_PORT = '23940'
-REDIS_DB = 1
+REDIS_HOST = os.environ['REDIS_HOST']
+REDIS_PORT = os.environ['REDIS_PORT']
+REDIS_DB = os.environ['REDIS_DB']
 
 # # Celery Configuration docker
-CELERY_BROKER_URL = 'amqps://mnblvtxv:Sn6DfuO620YOAZ3eikewGOn4mycnV1yz@fish.rmq.cloudamqp.com/mnblvtxv'
-CELERY_RESULT_BACKEND = 'redis://ec2-52-70-18-167.compute-1.amazonaws.com:23940/1'
+CELERY_BROKER_URL = os.environ['CELERY_BROKER_URL']
+CELERY_RESULT_BACKEND = os.environ['CELERY_RESULT_BACKEND']
 
 django_heroku.settings(locals(), test_runner=False)

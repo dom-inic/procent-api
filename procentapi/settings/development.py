@@ -36,9 +36,9 @@ AWS_HEADERS = {
     'Expires': 'Sun, 27 Feb 2099 20:00:00 GMT',
     'Cache-Control': 'max-age=94608000',
 }
-REDIS_HOST = 'ec2-44-196-160-1.compute-1.amazonaws.com'
-REDIS_PORT = '16340'
-REDIS_DB = 1
+REDIS_HOST = os.environ['REDIS_HOST']
+REDIS_PORT = os.environ['REDIS_PORT']
+REDIS_DB = os.environ['REDIS_DB']
 
 # Celery Configuration docker
-CELERY_BROKER_URL = 'rediss://:p6da119e6d04a68daf6bfa00b216a2a45605feceee98f003355d56c3c9d177b0d@ec2-44-196-160-1.compute-1.amazonaws.com:16340'
+CELERY_BROKER_URL = os.environ['CELERY_RESULT_BACKEND']
