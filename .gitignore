@@ -27,6 +27,8 @@ MANIFEST
 
 # Environments
 .env
+.env.dev
+.env.prod 
 .venv
 env/
 venv/
