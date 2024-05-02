@@ -1,8 +1,7 @@
 # deployed but still under development
 # for local use development
 import os
-from procentapi.settings.base import BASE_DIR
-from . base import *
+from . base import *  # noqa: F403
 
 
 DEBUG = True

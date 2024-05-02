@@ -1,9 +1,11 @@
-from django.db import models
-from shop.models import Product
 from decimal import Decimal
+
+from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-from coupon.models import Coupon
 from django.utils.translation import gettext_lazy as _
+
+from shop.models import Product
+from coupon.models import Coupon
 
 
 class Order(models.Model):

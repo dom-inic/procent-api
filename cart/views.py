@@ -2,11 +2,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
+
 from shop.models import Product
+from shop.recommender import Recommender
+from coupon.forms import CouponApplyForm
 from .cart import Cart
 from .forms import CartAddProductForm
-from coupon.forms import CouponApplyForm
-from shop.recommender import Recommender
 
 @require_POST
 def cart_add(request, product_id):

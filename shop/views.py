@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator
+
 from . models import Category, Product
 from cart.forms import CartAddProductForm
 from . recommender import Recommender
