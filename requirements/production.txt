@@ -1,0 +1,8 @@
+-r base.txt
+
+boto3==1.29.7
+botocore==1.32.7
+django-storages==1.14.2
+gunicorn==21.2.0
+s3transfer==0.8.0
+whitenoise==6.6.0

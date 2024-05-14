@@ -1,0 +1,5 @@
+-r base.txt
+
+amqp==5.1.19
+flower==2.0.0
+weasyprint==59.0
