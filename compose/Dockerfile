@@ -13,7 +13,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # create root directory for our project in the container
-RUN mkdir /procentapi 
+RUN mkdir /procentapi
 
 WORKDIR /procentapi
 
@@ -26,9 +26,9 @@ COPY ./requirements.txt .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8000  
-# start server  
-CMD python manage.py runserver 
+EXPOSE 8000
+# start server
+CMD python manage.py runserver
 
 
 COPY . .
