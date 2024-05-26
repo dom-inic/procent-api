@@ -16,7 +16,7 @@
 #   # https://github.com/dependabot/dependabot-core/issues/2178
 #   - package-ecosystem: 'docker'
 #     # Look for a `Dockerfile`
-#     directory: 'compose/'
+#     directory: 'compose/local/'
 #     # Every weekday
 #     schedule:
 #       interval: 'daily'
