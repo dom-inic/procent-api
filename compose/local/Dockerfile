@@ -1,7 +1,7 @@
 # The first instruction is what image we want to base our container on
 # We Use an official Python runtime as a parent image
 
-FROM python:3.10.4-slim-bullseye
+FROM python:3.10.14-slim-bullseye
 RUN apt-get update
 RUN apt-get -y install python3-pip python3-cffi python3-brotli libpango-1.0-0 libpangoft2-1.0-0
 ENV WEASYPRINT_VERSION 57.1
