@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -22,16 +23,17 @@ from django.utils.translation import gettext_lazy as _
 
 
 urlpatterns = i18n_patterns(
-    path(_('admin/'), admin.site.urls),
-    path(_('cart/'), include('cart.urls', namespace='cart')),
-    path(_('orders/'), include('orders.urls', namespace='orders')),
-    path(_('payment/'), include('payment.urls', namespace='payment')),
-    path(_('coupons/'), include('coupon.urls', namespace='coupons')),
-    path('rosetta/', include('rosetta.urls')),
-    path('users/', include('users.urls')),
-    path('', include('shop.urls', namespace='shop')),
+    path(_("admin/"), admin.site.urls),
+    path(_("cart/"), include("cart.urls", namespace="cart")),
+    path(_("orders/"), include("orders.urls", namespace="orders")),
+    path(_("payment/"), include("payment.urls", namespace="payment")),
+    path(_("coupons/"), include("coupon.urls", namespace="coupons")),
+    path("rosetta/", include("rosetta.urls")),
+    path("users/", include("users.urls")),
+    path("__debug__/", include("debug_toolbar.urls")),
+    path("", include("shop.urls", namespace="shop")),
     # path('api-auth/', include('rest_framework.urls')),
 )
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
