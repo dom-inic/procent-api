@@ -1,6 +1,6 @@
 # procentstore
 
-eccomerce store made using django with features such as products crud, orders, cart, coupon, payment processing, localization in swahili and english, accounts. it utilizes technologies such as celery for asyncronous tasks with redis as its backend, caching to increase speed. it also utilizes docker for containerization and other tools for efficient development.
+eccomerce store made using django with features such as products crud, recommender engine, orders, cart, coupon, payment processing, localization in swahili and english, accounts. it utilizes technologies such as celery for asyncronous tasks with redis as its backend, caching to increase speed. it also utilizes docker for containerization and other tools for efficient development.
 
 
 ## Settings
